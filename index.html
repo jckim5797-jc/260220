@@ -38,12 +38,23 @@
 
             <!-- 2. Quiz Screen -->
             <div id="quiz-screen" class="screen hidden">
+                <div class="progress-header">
+                    <span id="progress-text">1 / 10</span>
+                </div>
                 <div class="progress-bar">
                     <div id="progress-fill"></div>
                 </div>
                 <div class="card">
                     <div class="icon-display">🌮</div>
                     <h2 id="question-word">Palabra</h2>
+                    
+                    <p id="example-sentence" class="example">Example sentence goes here</p>
+
+                    <div class="hint-container">
+                        <button id="hint-btn" class="hint-btn">💡 힌트 보기</button>
+                        <p id="hint-text" class="hidden"></p>
+                    </div>
+
                     <input type="text" id="answer-input" placeholder="뜻을 입력하세요 (예: 사과)" autocomplete="off">
                     <p id="feedback-msg" class="feedback hidden"></p>
                     <button id="submit-btn" class="primary-btn">정답 확인 ✨</button>
