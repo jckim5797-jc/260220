@@ -6,7 +6,7 @@
     --background-color: #FFFFF0; /* Ivory */
     --card-bg: #FFFFFF;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --font-family: 'Nunito', sans-serif;
+    --font-family: 'Nunito', 'Noto Sans KR', sans-serif;
     --border-radius: 20px;
 }
 
