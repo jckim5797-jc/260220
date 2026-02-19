@@ -1,14 +1,83 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Hola! 스페인어 단어장</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google AdSense Placeholder (Replace with actual script later) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+
+    <div class="container">
+        <header>
+            <h1>🥑 ¡Hola! 스페인어</h1>
+            <p>귀여운 단어 학습기</p>
+        </header>
+
+        <!-- AdSense Top Slot -->
+        <div class="ad-container">
+            <div class="ad-placeholder">광고 공간 (상단)</div>
+        </div>
+
+        <main id="app">
+            <!-- Screens will be injected here by JavaScript -->
+            
+            <!-- 1. Start Screen -->
+            <div id="start-screen" class="screen active">
+                <div class="card">
+                    <h2>학습 설정</h2>
+                    <label for="word-count">학습할 단어 수:</label>
+                    <input type="number" id="word-count" value="10" min="1" max="50">
+                    <button id="start-btn" class="primary-btn">시작하기 🚀</button>
+                </div>
+            </div>
+
+            <!-- 2. Quiz Screen -->
+            <div id="quiz-screen" class="screen hidden">
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <div class="card">
+                    <div class="icon-display">🌮</div>
+                    <h2 id="question-word">Palabra</h2>
+                    <input type="text" id="answer-input" placeholder="뜻을 입력하세요 (예: 사과)" autocomplete="off">
+                    <p id="feedback-msg" class="feedback hidden"></p>
+                    <button id="submit-btn" class="primary-btn">정답 확인 ✨</button>
+                    <button id="next-btn" class="secondary-btn hidden">다음 문제 ➡️</button>
+                </div>
+            </div>
+
+            <!-- 3. Result Screen -->
+            <div id="result-screen" class="screen hidden">
+                <div class="card">
+                    <h2>🎉 학습 완료!</h2>
+                    <p class="score">점수: <span id="final-score">0</span> / <span id="total-count">0</span></p>
+                    
+                    <div id="review-section" class="hidden">
+                        <h3>🧐 틀린 단어 복습</h3>
+                        <ul id="wrong-list"></ul>
+                        <button id="retry-wrong-btn" class="secondary-btn">틀린 문제 다시 풀기 🔄</button>
+                    </div>
+
+                    <button id="restart-btn" class="primary-btn">처음으로 돌아가기 🏠</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- AdSense Bottom Slot -->
+        <div class="ad-container">
+            <div class="ad-placeholder">광고 공간 (하단)</div>
+        </div>
+
+        <footer>
+            <p>© 2026 ¡Hola! Spanish Learner</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
